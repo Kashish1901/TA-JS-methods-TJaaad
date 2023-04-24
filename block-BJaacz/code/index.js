@@ -3,14 +3,23 @@
 /*
   Create a function named addTwo which accepts a number, adds 2 to the number and return the new value.
 */
+let addTwo = function(num){
+  return num + 2;
+}
 
 /*
   Create a function named addThree which accepts a number, adds 3 to the number and return the new value.
 */
+let addThree = function(num){
+  return num + 3;
+}
 
 /*
   Create a function named addFive which accepts a number, adds 5 to the number and return the new value.
 */
+let addFive = function(num){
+  return num + 5;
+}
 
 /*
   Create a function named addTwoToArray which accepts:
@@ -19,6 +28,17 @@
     - While doing so use the funciton addTwo
 */
 
+function addTwoToArray(arr , cb){
+  let finalArray = [];
+  
+  for (let num of arr){
+    if(cb(arr));
+  }
+  return finalArray;
+
+}
+  
+console.log(addTwoToArray([1,32,6,9,10] , addTwo));
 /*
   Create a function named addThreeToArray which accepts:
     - an array of numbers
@@ -291,7 +311,7 @@ filter is a higher order function.
     - call the callback function with each object of array
     - if callback function returns true add to new array otherwise don't
     - returns a new array
-
+ 
   EXAMPLE:
     console.log(filter(people, isAdult));
     console.log(filter(grade, isMale));
@@ -319,3 +339,8 @@ filter is a higher order function.
     console.log(multiplyByFive(20)); // 180
     console.log(multiplyByFive(5)); // 45
 */
+function multiplyBy(num){
+  return function(num2){
+    return num * num2;
+  }
+}
