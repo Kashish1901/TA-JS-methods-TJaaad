@@ -61,6 +61,7 @@ console.log(numbers.flat(1));
 // (for multiple level flat accepts argument by default it's 1 `array.flat(2)`)
 console.log(numbersTwo.flat(2));
 // Convert the numbersThree array to one level element.
+numbersThree.flat(5);
 // Remove all sub-arrays to individual elements, log them and update the value of numbersThree to the new flat array.
 numbersThree = numbersThree.flat(5);
 // Use forEach to log all the elements of numberThree array
@@ -86,4 +87,4 @@ numbersTwo.reverse();
 // Join all fruits with '-', convert to uppercase and log it
 console.log(fruits.join("-").toUpperCase());
 // Join all fruits with '&', convert to lowercase and log it
-console.log(fruits.join("&").toLowerCase);
+console.log(fruits.join("&").toLowerCase());
