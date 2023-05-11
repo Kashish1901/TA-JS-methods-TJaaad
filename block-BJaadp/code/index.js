@@ -16,18 +16,36 @@ let persons = [
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
-
+let peopleGrade = persons.map((person) => person.grade);
+let gradetotal = peopleGrade.reduce((acc , cv) => { 
+  return acc + cv;
+} , 0);
+avgGrade = gradetotal / peopleGrade.length;
 // Find the average grade of male
-
+let maleGrade = persons.filter((person) => person.sex == "M").map((person) => person.grade);
+let avgMaleGrade = maleGrade.reduce((acc , cv) => {
+  return acc + cv ;
+}, 0) / maleGrade.length;
 // Find the average grade of female
-
+let femaleGrade = persons.filter((person) => person.sex == "F").map((person) => person.grade);
+let avgFemaleGrade = femaleGrade.reduce((acc , cv) => {
+  return acc + cv ;
+}, 0) / femaleGrade.length;
 // Find the highest grade
-
+let highestGrade =[...peopleGrade].sort((a,b) => a-b).pop();
 // Find the highest grade in male
-
+let highestGradeMale =[...maleGrade].sort((a,b) => a-b).pop();
 // Find the highest grade in female
-
+let highestGradeFemale =[...femaleGrade].sort((a,b) => a-b).pop();
 // Find the highest grade for people whose name starts with 'J' or 'P'
+let nameWithJOrP = persons.filter((person) => 
+person.name.startsWith("J") ||
+person.name.startsWith("P")
+);
+
+let gradeWithJOrP = nameWithJOrP.map((person) => person.grade);
+
+let highestGradeWithJorP = [...gradeWithJOrP].sort((a,b) => a-b).pop();
 
 const fruitBasket = [
   'banana',
@@ -70,6 +88,9 @@ const data = [
 ];
 
 // Using reduce flat data array
+let flatArray = data.reduce((acc , cv) => {
+  return acc + cv;
+},{});
 
 const dataTwo = [
   [1, 2, 3],
@@ -79,7 +100,9 @@ const dataTwo = [
 ];
 
 // Using reduce flat dataTwo array
-
+let flatArrayTwo = dataTwo.reduce((acc , cv) => {
+  return acc + cv;
+},{});
 /*
 
 Create these functions which accepts a number value and returns a number value:
