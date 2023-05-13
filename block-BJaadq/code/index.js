@@ -1,32 +1,33 @@
 // NOTE: You can not use reduce methods to solve this exercise
 
 function countAllPeople() {
-  // your code goes here
+  
 }
 
 function peopleByHouses() {
-  // your code goes here
+  return got.houses.people();
 }
 
 function everyone() {
-  // your code goes here
+  
 }
 
 function nameWithS() {
-  // your code goes here
+ return got.houses.name[0].startWith("S");
 }
 
 function nameWithA() {
-  // your code goes here
+  return got.houses.name[0].startWith("A");
 }
 
 function surnameWithS() {
-  // your code goes here
+  return got.houses.name[1].startWith("S")
 }
 
 function surnameWithA() {
-  // your code goes here
+  return got.houses.name[1].startWith("A");
 }
+
 
 function peopleNameOfAllHouses() {
   // your code goes here
